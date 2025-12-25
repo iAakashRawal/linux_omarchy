@@ -1,0 +1,69 @@
+# ===============================
+# LOOK & FEEL (STABLE + CLEAN)
+# ===============================
+
+general {
+    gaps_in = 4
+    gaps_out = 6
+    border_size = 2
+
+    col.active_border = rgba(88c0d0ff)
+    col.inactive_border = rgba(3b4252cc)
+
+    layout = dwindle
+    resize_on_border = true
+}
+
+# ===============================
+# MISC FIXES
+# ===============================
+misc {
+    disable_hyprland_logo = true
+    disable_splash_rendering = true
+    force_default_wallpaper = 0
+}
+
+# ===============================
+# DECORATION (COMPATIBLE)
+# ===============================
+decoration {
+    rounding = 8
+
+    active_opacity = 1.0
+    inactive_opacity = 0.95
+
+    blur = true
+    blur_size = 6
+    blur_passes = 2
+}
+
+# ===============================
+# ANIMATIONS (SMOOTH)
+# ===============================
+animations {
+    enabled = true
+
+    bezier = dev, 0.25, 0.9, 0.1, 1.0
+
+    animation = windows, 1, 5, dev
+    animation = fade, 1, 4, default
+    animation = workspaces, 1, 4, dev
+}
+
+# ===============================
+# CHROME CLEAN LOOK
+# ===============================
+windowrulev2 = noborder, class:^(google-chrome)$
+windowrulev2 = opacity 1.0 1.0, class:^(google-chrome)$
+
+# ===============================
+# FULLSCREEN CONTROL
+# ===============================
+bind = SUPER, F, fullscreen, 1   # real fullscreen
+bind = SUPER, M, fullscreen, 0   # maximize (tabs visible)
+
+# ===============================
+# FLOAT / DEV SHORTCUTS
+# ===============================
+bind = SUPER, V, togglefloating
+bind = SUPER, P, pseudo
